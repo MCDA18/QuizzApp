@@ -1,0 +1,16 @@
+.mat-form-field,.button {
+    padding: 2px;
+    margin-top: 40px;
+    margin-left: 20px;
+    width: 300px;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    /* flex-direction: column; */
+}
+#title{
+    width: 1000px;
+}
+.button{
+    margin-left: auto;
+}

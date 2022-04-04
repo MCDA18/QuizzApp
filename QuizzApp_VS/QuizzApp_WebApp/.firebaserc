@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "studentquizz-2d5af"
+  },
+  "targets": {
+    "studentquizz-2d5af": {
+      "hosting": {
+        "QuizzApp": [
+          "studentquizz-2d5af"
+        ]
+      }
+    }
+  }
+}

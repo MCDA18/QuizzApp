@@ -1,0 +1,84 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+      <a class="navbar-brand" href="#">Student</a>
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/teacher-home-page']">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">My Courses</a>
+        </li>
+        <li class="nav-item active">
+            <a class="nav-link" href="#">Insert QA</a>
+          </li>
+      </ul>
+    
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+</nav>
+<div mat-dialog-content [formGroup]="questionform">
+    <div>
+    <mat-form-field appearance="outline" class="title">
+        <mat-label>Title</mat-label>
+        <input formControlName="questionTitle" matInput placeholder="Title">
+    </mat-form-field>
+    </div>
+    <div>
+    <mat-form-field appearance="outline">
+        <mat-label>Points(from 0 to 100)</mat-label>
+        <input formControlName="questionPoints" matInput placeholder="Points">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>Difficulty</mat-label>
+        <mat-select formControlName="questionDifficulty"placeholder="Difficulty">
+            <mat-option value="1">1</mat-option>
+            <mat-option value="2">2</mat-option>
+            <mat-option value="3">3</mat-option>
+            <mat-option value="4">4</mat-option>
+            <mat-option value="5">5</mat-option>
+        </mat-select>
+    </mat-form-field >
+    </div>
+    <div>
+    <mat-form-field appearance="outline">
+        <mat-label>Item 1</mat-label>
+        <input formControlName="questionItem1" matInput placeholder="Title">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>Item 2</mat-label>
+        <input formControlName="questionItem2" matInput placeholder="Title">
+    </mat-form-field>
+    </div>
+    <div>
+    <mat-form-field appearance="outline">
+        <mat-label>Item 3</mat-label>
+        <input formControlName="questionItem3" matInput placeholder="Title">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>Item 4</mat-label>
+        <input formControlName="questionItem4" matInput placeholder="Title">
+    </mat-form-field>
+</div>
+    <mat-form-field appearance="outline">
+        <mat-label>Right Answers/Answers</mat-label>
+            <mat-select formControlName="questionAnswers" placeholder="Difficulty" multiple="">
+                <mat-option value="1">1</mat-option>
+                <mat-option value="2">2</mat-option>
+                <mat-option value="3">3</mat-option>
+                <mat-option value="4">4</mat-option>
+            </mat-select>
+        </mat-form-field >
+    <!-- <mat-form-field appearance="outline">
+        <mat-label>Explain Solution</mat-label>
+        <input matInput placeholder="Title">
+    </mat-form-field> -->
+    <div>
+   <button mat-raised-button color="primary" (click)="submitQuestion()">Submit</button>
+</div>
+</div>
